@@ -40,8 +40,10 @@
                 android:layout_margin="5dp"
                 android:hint="Enter Item Name"
                 android:padding="5dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 >
 
                 <com.google.android.material.textfield.TextInputLayout
