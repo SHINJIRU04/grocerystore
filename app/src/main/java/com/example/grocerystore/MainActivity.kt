@@ -8,11 +8,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStoreOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
- class MainActivity : AppCompatActivity(),GroceryRVAdapter.GroceryItemClickInterface  {
+ class MainActivity(override val factory: ViewModelStoreOwner) : AppCompatActivity(),GroceryRVAdapter.GroceryItemClickInterface  {
     lateinit var itemsRV: RecyclerView
     lateinit var addFAB: FloatingActionButton
     lateinit var list:List<GroceryItems>
