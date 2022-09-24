@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class GroceryRVAdapter(
     var list: List<GroceryItems>,
-    val groceryItemClickInterface: MainActivity
+    val groceryItemClickInterface: GroceryItemClickInterface
 ) : RecyclerView.Adapter<GroceryRVAdapter.GroceryViewHolder>() {
 
     inner class GroceryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -37,7 +37,7 @@ class GroceryRVAdapter(
         holder.nameTV.text=list.get(position).itemName
         holder.quantityTV.text=list.get(position).itemQuantity.toString()
         holder.rateTV.text="Rs. "+list.get(position).itemPrice.toString()
-        val itemTotal: Int=list.get(position).itemPrice*list.get(position).itemQuantity
+        val itemTotal: Int=list.get(position).itemPrice * list.get(position).itemQuantity
         holder.amountTV.text="Rs "+ itemTotal.toString()
         holder.deleteTV.setOnClickListener {
             groceryItemClickInterface.onItemClick(list.get(position))

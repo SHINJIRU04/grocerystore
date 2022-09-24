@@ -48,9 +48,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
          dialog.setContentView(R.layout.grocery_add_dialog)
          val cancelBtn = dialog.findViewById<Button>(R.id.idBtnCancel)
          val addBtn = dialog.findViewById<Button>(R.id.idBtnAdd)
-         val itemEdt = dialog.findViewById<EditText>(R.id.idEdtItemName)
-         val itemPriceEdt = dialog.findViewById<EditText>(R.id.idEdtItemPrice)
-         val itemQuantityEdt = dialog.findViewById<EditText>(R.id.idEdtItemQuantity)
+         val itemEdt = dialog.findViewById<EditText>(R.id.idEditItemName)
+         val itemPriceEdt = dialog.findViewById<EditText>(R.id.idEditItemPrice)
+         val itemQuantityEdt = dialog.findViewById<EditText>(R.id.idEditItemQuantity)
          cancelBtn.setOnClickListener{
              dialog.dismiss()
          }

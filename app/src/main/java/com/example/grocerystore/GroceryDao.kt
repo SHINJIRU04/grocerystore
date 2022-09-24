@@ -2,15 +2,16 @@ package com.example.grocerystore
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+
 @Dao
 interface GroceryDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(item: GroceryItems)
+     fun insert(item: GroceryItems)
 
     @Delete
-    suspend fun delete(item: GroceryItems)
+     fun delete(item: GroceryItems)
 
-    @Query(value: "SELECT * FROM grocery_items")
+    @Query("SELECT * FROM grocery_items")
     fun getAllGroceryItems() : LiveData<List<GroceryItems>>
 }

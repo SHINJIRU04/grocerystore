@@ -22,7 +22,8 @@
         app:tint="@color/white"
         android:layout_margin="20dp"
         android:id="@+id/idFABAdd"
-        app:backgroundTint="@color/blue_shade_2"/>
+        app:backgroundTint="@color/blue_shade_2"
+        android:layout_alignParentRight="true"/>
 
 
     <TextView

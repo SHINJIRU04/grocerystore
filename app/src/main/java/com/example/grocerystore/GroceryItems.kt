@@ -1,6 +1,8 @@
 package com.example.grocerystore
 
-import androidx.room.*
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "grocery_items")
 data class GroceryItems(
@@ -14,6 +16,6 @@ data class GroceryItems(
     var itemPrice: Int,
 ) {
 
-    @PrimaryKey(autroGenerate = true)
+    @PrimaryKey(autoGenerate = true)
     var id:Int? = null
 }
